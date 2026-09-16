@@ -128,8 +128,8 @@ export const processSteps = [
 ]
 
 export const stats = [
-  { value: 50, suffix: '+', label: 'Projects Delivered' },
-  { value: 4, suffix: '', label: 'Countries Served' },
+  { value: 10, suffix: '+', label: 'Projects Delivered' },
+  { value: 3, suffix: '', label: 'Countries Served' },
   { value: 98, suffix: '%', label: 'Client Satisfaction' },
   { value: 3, suffix: 'x', label: 'Avg ROI Delivered' },
 ]
