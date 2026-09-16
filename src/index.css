@@ -499,8 +499,9 @@ h1.hero__title {
   background: var(--ink);
   color: var(--cream);
   width: 100%;
-  top: 30px;
+  top: 90px;
   left: 0;
+  z-index: 2;
   animation: float-slow 6s ease-in-out infinite;
 }
 .hero__card--ai {
@@ -509,6 +510,7 @@ h1.hero__title {
   width: 220px;
   bottom: 20px;
   right: -20px;
+  z-index: 3;
   animation: float 5s ease-in-out infinite;
   animation-delay: -2s;
 }
@@ -516,8 +518,9 @@ h1.hero__title {
   background: var(--cream);
   border: 1px solid var(--border);
   width: 180px;
-  top: 0;
+  top: -16px;
   left: -20px;
+  z-index: 1;
   animation: float 7s ease-in-out infinite;
   animation-delay: -3s;
 }
