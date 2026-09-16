@@ -130,7 +130,7 @@ export default function ContactSection() {
               </li>
             </ul>
 
-            
+            <a
               className="contact-info__whatsapp"
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMsg}`}
               target="_blank"
