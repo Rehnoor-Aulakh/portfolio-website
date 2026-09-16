@@ -12,7 +12,8 @@ import { useState, useRef } from 'react'
 // After that one-time confirmation, every future submission is
 // emailed to you automatically.
 // ============================================================
-const FORMSUBMIT_EMAIL = 'jatinkalra0111@gmail.com'
+const FORMSUBMIT_EMAIL =
+  'jatinkalra0111@gmail.com,aulakhrehnoor@gmail.com'
 
 // ============================================================
 // WHATSAPP — Replace with your WhatsApp Business number (with country code, no +)
