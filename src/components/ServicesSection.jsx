@@ -17,7 +17,7 @@ export default function ServicesSection() {
           <div className="section-heading anim-fade-left">
             <span className="eyebrow">What we do</span>
             <h2 id="services-title">
-              Small team.<br /><em>Huge range.</em>
+              Two people.<br /><em>One personal build.</em>
             </h2>
             <p className="section-heading__copy">
               From autonomous AI agents to pixel-perfect React interfaces — we cover
