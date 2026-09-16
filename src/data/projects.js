@@ -3,21 +3,21 @@ const numberedImages = (folder, count, extension = 'png') =>
 
 export const projects = [
   {
-    id: 'ai-agent-platform',
+    id: 'health-diagnostics-platform',
     folder: 'project1',
     imageCount: 7,
-    title: 'Autonomous AI Sales Agent',
-    category: 'AI Agents',
-    client: 'B2B SaaS Company',
-    impact: '⚡ 80% Manual Prospecting Reduced',
-    description: 'A fully autonomous multi-agent pipeline that crawls target domains, qualifies leads, drafts hyper-personalized outreach emails, and books meetings automatically.',
-    challenge: 'The sales team spent 25+ hours weekly manually researching leads and typing cold emails, resulting in inconsistent outreach and low response rates.',
-    solution: 'Built a LangChain & GPT-4o autonomous agent with web browsing, lead scoring criteria, CRM synchronization, and automated multi-touch email sequences.',
-    deliverables: ['Autonomous Web Researcher Agent', 'Dynamic Email Personalization Engine', 'FastAPI Backend & React Dashboard', 'HubSpot & Salesforce Webhooks'],
-    technologies: ['Python', 'LangChain', 'GPT-4o', 'React', 'FastAPI', 'PostgreSQL'],
+    title: 'Medical Diagnostics & Health Reports Platform',
+    category: 'Health Tech',
+    client: 'Diagnostic Healthcare Lab',
+    impact: '⚡ Lab Reports Turned Into Clear, Trackable Insights',
+    description: 'A full patient portal that translates raw lab report data into a clear, trackable health history — with automated abnormal-result flagging, historical trend charts, diagnostic package booking, and an admin backend for staff.',
+    challenge: 'Patients received dense, jargon-heavy PDF lab reports with no way to see how a given marker was trending over time, and staff had no centralized system for managing diagnostic packages and patient records.',
+    solution: 'Built a patient-facing portal integrated with lab partners (Thyrocare & Agilus Diagnostics) that ingests report data, flags abnormal values against reference ranges, plots historical trends per test, and generates downloadable PDF reports — backed by an admin panel for managing patients, tests, and packages.',
+    deliverables: ['Health History Dashboard with Trend Analytics', 'Automated Abnormal-Result Flagging & Reference Ranges', 'One-Click PDF Report Downloads', 'Diagnostic Package Search & Booking', 'Admin Panel for Patients, Tests & Packages', 'Lab Partner API Integrations'],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Chart.js', 'REST APIs', 'PDF Generation'],
     liveUrl: null,
     featured: true,
-    badge: 'AI'
+    badge: 'Web'
   },
   {
     id: 'ecommerce-chatbot',
