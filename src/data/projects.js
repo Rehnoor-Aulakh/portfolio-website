@@ -73,7 +73,7 @@ export const projects = [
   {
     id: 'editorial-platform',
     folder: 'project5',
-    imageCount: 3,
+    imageCount: 4,
     title: 'Editorial Publishing Platform',
     category: 'Web Application',
     client: 'Media Startup',
@@ -92,7 +92,7 @@ export const projects = [
 export const team = [
   {
     name: 'Rehnoor Aulakh',
-    role: 'Creative Developer & AI Engineer',
+    role: 'Creative & Full Stack Developer',
     initials: 'RA',
     description: 'Rehnoor brings ideas to life at the intersection of beautiful design and powerful technology. Specializes in React, AI integrations, and pixel-perfect UI.',
     skills: ['React', 'AI Integration', 'UI/UX', 'LangChain', 'Node.js'],
@@ -101,11 +101,11 @@ export const team = [
   },
   {
     name: 'Jatin Kalra',
-    role: 'ML Engineer & Full-Stack Developer',
+    role: 'GenAI Engineer',
     initials: 'JK',
     description: 'Jatin architechts the intelligence behind the curtain — from ML pipelines to AI agents. Specializes in Python, machine learning, and backend systems.',
-    skills: ['Python', 'Machine Learning', 'FastAPI', 'TensorFlow', 'LLMs'],
-    linkedin: 'https://linkedin.com/in/jatin-kalra',
+    skills: ['Python', 'Machine Learning', 'TensorFlow', 'LLMs'],
+    linkedin: 'https://linkedin.com/in/jatinkalra1710',
     github: 'https://github.com/jatinkalra1710',
   },
 ]
