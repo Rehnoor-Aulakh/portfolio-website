@@ -76,7 +76,7 @@ export default function HeroSection() {
               ))}
             </div>
             <p className="hero__trust-text">
-              <strong>50+ projects</strong> delivered across 🇺🇸 🇬🇧 🇪🇺 🇦🇺
+              <strong>10+ projects</strong> delivered across 🇺🇸 🇬🇧 🇪🇺 🇦🇺
             </p>
           </div>
         </div>
