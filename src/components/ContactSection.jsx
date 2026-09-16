@@ -1,18 +1,18 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
 
 // ============================================================
-// EMAILJS CONFIGURATION — Fill these in after setting up at emailjs.com
-// Step 1: Go to https://www.emailjs.com/ and create a free account
-// Step 2: Add an Email Service (Gmail/Outlook) → copy the Service ID below
-// Step 3: Create an Email Template → copy the Template ID below
-// Step 4: Go to Account → API Keys → copy your Public Key below
+// FORMSUBMIT CONFIGURATION — no account/API key needed.
+// Step 1: Put your real email address below.
+// Step 2: Deploy the site and submit the form once yourself.
+// Step 3: Check that inbox for a "Confirm your email" message from
+//         FormSubmit and click the confirmation link — until you do
+//         this, submissions are silently discarded, not delivered.
+// After that one-time confirmation, every future submission is
+// emailed to you automatically.
 // ============================================================
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'   // e.g. 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'  // e.g. 'template_xyz789'
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'   // e.g. 'AbcDEFghIJklMNop'
+const FORMSUBMIT_EMAIL = 'jatinkalra0111@gmail.com'
 
 // ============================================================
 // WHATSAPP — Replace with your WhatsApp Business number (with country code, no +)
@@ -58,29 +58,31 @@ export default function ContactSection() {
 
     setStatus('sending')
 
-    const templateParams = {
-      from_name:    formData.name,
-      from_email:   formData.email,
-      company:      formData.company || 'Not provided',
-      country:      formData.country || 'Not specified',
-      budget:       formData.budget  || 'Not specified',
-      service:      formData.service,
-      message:      formData.message,
-      reply_to:     formData.email,
-      to_email:     'hello@loomdigital.dev', // Change to your email
-    }
-
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
-      )
+      const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          Name:      formData.name,
+          Email:     formData.email,
+          Company:   formData.company || 'Not provided',
+          Country:   formData.country || 'Not specified',
+          Budget:    formData.budget  || 'Not specified',
+          Service:   formData.service,
+          Message:   formData.message,
+          _subject:  `New inquiry from ${formData.name} — ${formData.service}`,
+          _template: 'table',
+          _captcha:  false,
+          _honey:    formData.honeypot,
+        }),
+      })
+
+      if (!response.ok) throw new Error('FormSubmit request failed')
+
       setStatus('success')
       setFormData({ name: '', email: '', company: '', country: '', budget: '', service: '', message: '', honeypot: '' })
     } catch (err) {
-      console.error('EmailJS error:', err)
+      console.error('FormSubmit error:', err)
       setStatus('error')
     }
   }
@@ -107,7 +109,7 @@ export default function ContactSection() {
             <ul className="contact-info__list" aria-label="Contact details">
               <li className="contact-info__item">
                 <span className="contact-info__item-icon" aria-hidden="true">✉️</span>
-                <span>hello@loomdigital.dev</span>
+                <span>jatinkalra0111@gmail.com</span>
               </li>
               <li className="contact-info__item">
                 <span className="contact-info__item-icon" aria-hidden="true">⚡</span>
@@ -128,7 +130,7 @@ export default function ContactSection() {
               </li>
             </ul>
 
-            <a
+            
               className="contact-info__whatsapp"
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMsg}`}
               target="_blank"
@@ -302,7 +304,7 @@ export default function ContactSection() {
                     <div className="form-submit">
                       {status === 'error' && (
                         <p style={{ color: '#c0392b', fontSize: '.8rem', marginBottom: 12, fontFamily: 'var(--font-mono)' }} role="alert">
-                          ⚠ Send failed. Please try emailing us directly at hello@loomdigital.dev
+                          ⚠ Send failed. Please try emailing us directly at jatinkalra0111@gmail.com
                         </p>
                       )}
                       <button
