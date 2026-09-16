@@ -13,7 +13,7 @@ import { useState, useRef } from 'react'
 // emailed to you automatically.
 // ============================================================
 const FORMSUBMIT_EMAIL =
-  'jatinkalra0111@gmail.com,aulakhrehnoor@gmail.com'
+  'jatinkalra0111@gmail.com'
 
 // ============================================================
 // WHATSAPP — Replace with your WhatsApp Business number (with country code, no +)
@@ -75,6 +75,7 @@ export default function ContactSection() {
           _template: 'table',
           _captcha:  false,
           _honey:    formData.honeypot,
+          _cc: 'aulakhrehnoor@gmail.com',
         }),
       })
 
