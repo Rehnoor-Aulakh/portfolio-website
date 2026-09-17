@@ -1,9 +1,4 @@
-// ============================================================
-// Replace with your actual WhatsApp Business number
-// Format: country code + number, no +, no spaces
-// Example: '919876543210' for India +91 9876543210
-// ============================================================
-const WHATSAPP_NUMBER = 'YOUR_WHATSAPP_NUMBER'
+const WHATSAPP_NUMBER = '917973466597'
 
 const message = encodeURIComponent(
   "Hi Loom Digital! I found you online and I'm interested in your AI/web development services. Can we discuss my project?"
