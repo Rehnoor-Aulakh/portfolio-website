@@ -1,7 +1,13 @@
 import '../index.css'
+import { SITE_URL } from '../lib/seo-config'
+
+export const viewport = {
+  themeColor: '#18211f',
+  colorScheme: 'light',
+}
 
 export const metadata = {
-  metadataBase: new URL('https://loomdigital.dev'),
+  metadataBase: new URL(SITE_URL),
   title: 'Loom Digital | AI Agents, Chatbots & Web Development Agency | USA UK EU AUS',
   description: 'Loom Digital — Expert AI agents, custom chatbots, ML implementation & premium web development. Rehnoor Aulakh & Jatin Kalra serve clients across USA, UK, EU & Australia. Get a free consultation today.',
   keywords: [
@@ -18,13 +24,16 @@ export const metadata = {
     'USA UK Australia',
   ],
   authors: [{ name: 'Rehnoor Aulakh' }, { name: 'Jatin Kalra' }],
+  alternates: {
+    canonical: '/',
+  },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
     type: 'website',
-    url: 'https://loomdigital.dev/',
+    url: SITE_URL,
     title: 'Loom Digital | AI Agents, Chatbots & Web Development Agency',
     description: 'Expert AI agents, chatbots & web development. Serving USA, UK, EU & Australia. Get a free consultation.',
     siteName: 'Loom Digital',
@@ -42,7 +51,7 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Loom Digital',
-    url: 'https://loomdigital.dev',
+    url: SITE_URL,
     description: 'AI agents, chatbot development, ML implementation and premium web development agency serving USA, UK, EU and Australia.',
     foundingDate: '2024',
     founders: [
@@ -53,7 +62,7 @@ export default function RootLayout({ children }) {
     areaServed: ['United States', 'United Kingdom', 'European Union', 'Australia'],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'hello@loomdigital.dev',
+      email: 'jatinkalra0111@gmail.com',
       contactType: 'sales',
       availableLanguage: ['English'],
     },
