@@ -95,7 +95,7 @@ export const team = [
     role: 'Creative & Full Stack Developer',
     initials: 'RA',
     description: 'Rehnoor brings ideas to life at the intersection of beautiful design and powerful technology. Specializes in React, AI integrations, and pixel-perfect UI.',
-    skills: ['React', 'AI Integration', 'UI/UX', 'React Native', 'Node.js', 'Flutter','Spring Boot',
+    skills: ['React', 'AI Integration', 'UI/UX', 'React Native', 'Node.js', 'Flutter','Spring Boot'],
     linkedin: 'https://linkedin.com/in/rehnoor-aulakh',
     github: 'https://github.com/Rehnoor-Aulakh',
   },
